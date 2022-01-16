@@ -8,8 +8,7 @@
 /* Fine regola di resset */
 
 body{
-    width: 100vw;    
-    border: 2px solid blue;    
+    width: 100vw;        
 }
 header{
     width: 100%;
@@ -18,10 +17,10 @@ header{
 main{
     display: flex;
     width: 100%;  
-    border: 1px solid black;
+    
 }
 /* Inizio header nav */
-nav{
+nav{    
     width: 100%;
     height: 50px;    
     display: flex;
@@ -30,24 +29,34 @@ nav{
 /* Fine header nav */
 
 /* Inizio nav right */
+.nav-right a{
+    text-decoration: none;
+    color: black;
+}
+.nav-right i.fa-youtube{
+    color: red;
+    font-size: 25px;
+}
 .fas-fa-bars{
-    margin: 0px 15px 0px 15px;
+    padding: 15px;
     font-size: 16px;
+    margin-right: 10px;
 }
 .fab-fa-youtube{  
     position: relative;  
     font-size: 25px;
     font-weight: 600;
+    letter-spacing: -3px;
+}
+.fab-fa-youtube i{
+    padding-right: 5px;
 }
 .fab-fa-youtube span{
    font-size: 10px; 
    position: relative;
    bottom: 15px;
-   right: 6px;   
-}
-.nav-right i.fa-youtube{
-    color: red;
-    font-size: 25px;
+   right: 1px;  
+   letter-spacing: 0px; 
 }
 /* Fine nav right */
 
@@ -55,6 +64,7 @@ nav{
 .nav-right, 
 .nav-center, 
 .nav-left{
+    flex-shrink: 0;  
     display: flex; 
     justify-content: center;   
     align-items: center;
@@ -97,8 +107,11 @@ input{
 ::placeholder{
     color: #c8c8c8;
 }
+.fas-fa-search:hover, .fas-fa-microphone:hover{
+    background-color: rgb(221, 221, 221);
+}
 .fas-fa-search i{
-    color: #949494;
+    color: #949494;    
 } 
 .fas-fa-microphone{  
     margin-left: 10px;  
@@ -111,11 +124,19 @@ input{
     border-radius: 50%;
     background-color: rgb(240, 240, 240);    
 }
+.fas-fa-microphone a{
+    text-decoration: none;
+    color: black;
+}
 /* Fine nav center */
 
 /* Inizio nav left */
 .nav-left{
     gap: 30px;
+}
+.nav-left a{
+    text-decoration: none;
+    color: black;
 }
 .fa-video, .fa-bell, .fa-th{
     font-size: 24px;
@@ -130,42 +151,58 @@ input{
 /* Fine nav left */
 
 /* Inizio aside container */
-.aside-container{     
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center; 
-    min-width: 240px;   
+.aside-container{         
+    min-width: 240px;    
+}
+.dividere-aside{
+    border-top: 1px solid lightgrey;
+    margin-top: 20px;
 }
 .aside-container h4 {    
-    padding-left: 24px;   
-    padding-bottom: 20px; 
+    padding-left: 15px;   
+    padding-bottom: 15px; 
     color: #555555;
+}
+.aside-container a{
+    text-decoration: none;
+    color: rgb(56, 56, 56);
 }
 .aside-container ul{
     display: flex;
     flex-direction: column;    
 }
+.aside-container li{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+
+}
 /* Fine aside container */
 
 /* Inizio home container */
+.home-container li:first-child{
+    background-color: rgb(192, 192, 192);
+}
 /* Inizio regole comuni aside container */
 .home-container, 
 .raccolta-container, 
 .iscrizioni,
-.altro-da-youtube{
-    padding-top: 30px;
-    width: 90%;
-    margin: 0 auto;
+.altro-da-youtube{    
+    padding-top: 20px;
+    width: 100%;
+    margin: 0 auto;    
 }
-
-
+.aside-container li:hover{
+    background-color: rgb(226, 226, 226);
+}
 li {
     list-style: none;
-    font-size: 16px;          
+    font-size: 14px;  
+    flex-shrink: 0;              
 }
 li i{   
-    padding: 10px 24px 24px 24px;    
+    padding: 15px;    
 }
 /* Fine regole comuni aside container */
 /* Fine home container */
@@ -179,31 +216,61 @@ li i{
 
 /* Inizio section */
 section{  
-    width: 100%;  
-    border: 1px solid red;
+    padding-left: 10px;
+    width: 100%;     
+}
+.dividere-section{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;    
+    border-top: 3px solid lightgrey;
 }
 /* Fine section */
 
 /* Inizio section header */
 .section-header{
-    margin: 10px 0px 0px 20px;    
+    margin: 10px 10px 0px 0px;       
 }
 .section-header ul{
     display: flex;
     justify-content: space-between;
+    padding: 10px;
+    border-top: 1px solid grey;     
+}
+.section-header li:first-child{    
+    background-color: black;
+    color: rgb(255, 255, 255);    
+}
+.section-header a{
+    text-decoration: none;
+    color: rgb(61, 61, 61);
+}
+.section-header .tutti-href{
+    color: white;
+}
+.section-header li:hover{    
+    background-color: rgb(226, 226, 226);    
 }
 .section-header ul li{
-    padding: 6px 12px;
+    padding: 5px 10px;
     background-color: rgb(233, 233, 233);
     border: 1px solid rgb(212, 212, 212);
     border-radius: 20px;
+    font-size: 11px;
 }
 /* Fine section header */
 
 /* Inizio section main */
 .section-main{
+    display: flex;
+    flex-flow: row wrap;    
+    gap: 15px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
     width: 100%;    
-    border: 1px solid darkorchid;
+    border-top: 1px solid lightgrey;
+    background-color: rgb(241, 240, 240);
 }
 /* Fine section main */
 
@@ -222,11 +289,12 @@ section{
     height: 40%;    
 }
 .img-profile-autore{
+    margin: 12px 12px 0px 0px;
     width: 35px;
     height: 35px;      
     border-radius: 50%;      
 }
-a{
+.cards a{
    text-decoration: none; 
    color: grey;
 }
@@ -234,13 +302,18 @@ a{
     display: flex;
 }
 .titolo-card span{
+    display: flex;
     color: grey;
+}
+.titolo-card span i{     
+    padding: 2px; 
+    align-self: center;
 }
 .titolo-card i{
     color: grey;
 }
 .titolo-card span i{    
-    font-size: 6px;
+    font-size: 4px;
     color: grey;
 }
 /* Fine cards */
