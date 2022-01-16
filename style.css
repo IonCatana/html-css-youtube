@@ -57,6 +57,7 @@ nav{
    bottom: 15px;
    right: 1px;  
    letter-spacing: 0px; 
+   color: grey;
 }
 /* Fine nav right */
 
@@ -208,7 +209,14 @@ li i{
 /* Fine home container */
 
 /* Inizio iscrizioni */
-
+.iscrizioni .img-profile{
+    width: 24px;
+    height: 24px;    
+    margin: 15px;
+}
+.iscrizioni li{
+    line-height: 50px;
+}
 /* Fine iscrizioni */
 /* Inizio altro da youtube */
 
