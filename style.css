@@ -8,7 +8,7 @@
 /* Fine regola di resset */
 
 body{
-    width: 100vw;        
+    width: 100vw;         
 }
 header{
     width: 100%;
@@ -22,6 +22,7 @@ main{
 /* Inizio header nav */
 nav{    
     width: 100%;
+    margin: 0 auto;
     height: 50px;    
     display: flex;
     justify-content: space-between;

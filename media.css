@@ -1,17 +1,31 @@
+/* Ciao ragazzi ho deciso di fare il compito da zero, mi sono messo alla prova :=)
+Spero di non incasinarvi con la correzione */
+/* Non sono riuscito a fare quella speccie di freccetina nella "section header > ul > li" :((( */
+/* Tutto il resto spero di aver fatto  bene */
+
+/* Inizio responsive 800px */
 @media screen and (max-width: 800px){
     .raccolta-container li:nth-child(2),
     .raccolta-container li:nth-child(3),
     .raccolta-container li:nth-child(4),
     .raccolta-container li:nth-child(5),
     .raccolta-container li:nth-child(6),
+    .section-header li:nth-child(9),    
+    .section-header li:nth-child(10),
+    .section-header li:nth-child(11),
+    .section-header li:nth-child(12),
+    .section-header li:nth-child(13),
+    .section-header li:nth-child(8),
     .dividere-aside,
     .iscrizioni,
-    .altro-da-youtube{
+    .altro-da-youtube,
+    .section-main .cards:first-child{
         display: none;        
     }
+    .section-header li:nth-child(9),
     .nav-search{
         max-width: 40%;
-    }
+    }    
     .home-container li, .raccolta-container li:nth-child(1){
         display: flex;
         flex-direction: column;
@@ -38,12 +52,70 @@
         padding-top: 10px;
         padding-left: 5px;
         padding-right: 0px;
+    }        
+}
+/* Fine responsive 800px */
+/* Inizio responsive 1330px */
+@media screen and (max-width: 1330px) {
+    .nav-search {
+        max-width: 50vw;
+      }
+    .section-main{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }    
+    .section-header li:nth-child(10),
+    .section-header li:nth-child(11),
+    .section-header li:nth-child(12),
+    .section-header li:nth-child(13),
+    .section-header li:nth-child(5),
+    .section-header li:nth-child(2){
+        display: none;
     }
-    .section-header li:nth-child(15)
-    {
+}   
+ /*Fine responsive 1330px  */
+
+ /* Inizio responsive 509px */
+@media screen and (max-width:509px) {
+    .nav-search {
+        max-width: 10vw;
+      }
+    .section-header li:nth-child(6),
+    .section-header li:nth-child(7),
+    .section-header li:nth-child(8),
+    .section-header li:nth-child(9){
+        display: none;
+    }
+    .nav-search{
+        display: none;
+    }
+    .fas-fa-search{
+        border-left: 1px solid #c8c8c8;
+    }
+    .nav-left a:nth-child(1){
+        display: none;
+        gap: 0px;
+        
+    }
+    .nav-left{
+        display: flex;        
+        flex-direction: row-reverse;        
+        justify-content: center;
+        
+        
+    }       
+    .section-header li:nth-child(4){
         display: none;
     }
 }
-@media screen and (max-width: 1330px) {
+/* Fine responsive 509 */
+
+/* Inizio responsive 375px */
+@media screen and (max-width:375px){
+    .nav-right .fas-fa-bars, .aside-container{
+        display: none;
+    }
     
-}    
+}
+/* Fine responsive 375px */
